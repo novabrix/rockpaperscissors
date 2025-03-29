@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock-Paper-Scissors</title>
-    <link rel = "stylesheet" href = "style.css">
-</head>
-<body>
-<div class="container">
-    <h2>Presenting...</h2>
-    <h1><em>=== ROCK PAPER SCISSORS! ===</em></h1>
-    <h4 class="informative">- Computer Edition -</h4>
-    <h3>!! Use the console to play !!</h3>
-    <h4>Made by Idriis Yusuf, with the Odin Project!</h4>
-    <script src = "script.js"></script>
-</div>
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Presenting...</h2>
+      <h1><em>=== ROCK PAPER SCISSORS! ===</em></h1>
+      <h4 class="informative">- User Interface Edition -</h4>
+      <div class="box">
+        <div class="secondarybox">
+          <button class="one" onclick="startRoundR()">🪨</button>
+          <button class="two" onclick="startRoundP()">📄</button>
+          <button class="three" onclick="startRoundS()">✂️</button>
+        </div>
+        <div class="liner">
+          <p id="teller">Start the game with a throw!</p>
+          <p id="scorer">Choose Rock, Paper, or Scissors!</p>
+        </div>
+      </div>
+
+      <h4>Made by Idriis Yusuf, with the Odin Project!</h4>
+      <script src="script.js"></script>
+    </div>
+  </body>
 </html>

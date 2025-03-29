@@ -1,46 +1,69 @@
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
-    'Helvetica Neue', sans-serif;
-    background-color: burlywood;
-    border-radius: 20px;
-   /* border: 2px dotted red; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: burlywood;
+  border-radius: 20px;
+  /* border: 2px dotted red; */
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h2{
-    background-color: rgb(71, 39, 24);
-    color: whitesmoke;
-    padding: 50px 600px;
-    font-size: 45px;
-    margin-top: 0;
-
+h2 {
+  background-color: rgb(71, 39, 24);
+  color: whitesmoke;
+  padding: 30px 600px;
+  font-size: 45px;
+  margin-top: 0;
 }
 
-h1{
-    color: rgb(46, 30, 23);
-    font-size: 80px;
-    padding: 60px 600px auto;
-    margin-bottom: -15px;
-    margin-top: 40px;
+h1 {
+  color: rgb(46, 30, 23);
+  font-size: 80px;
+  padding: 60px 600px auto;
+  margin-bottom: -15px;
+  margin-top: 40px;
 }
 
-h3{
-    background-color: rgb(71, 39, 24);
-    color: whitesmoke;
-    padding: 50px 400px;
-    font-size: 30px;
-    margin-top: 0;
+.box {
+  display: flex;
+  background-color: rgb(71, 39, 24);
+  padding: 20px 200px;
+  font-size: 30px;
+  margin-top: 0;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-h4{
-    color: rgb(46, 30, 23);
-    font-size: 20px;
+h4 {
+  color: rgb(46, 30, 23);
+  font-size: 20px;
 }
 
+.one,
+.two {
+  background-color: lightgray;
+  padding: 20px;
+  margin-right: 200px;
+  font-size: 70px;
+}
 
+.three {
+  background-color: lightgray;
+  padding: 20px;
+  font-size: 70px;
+}
+
+.secondarybox {
+  display: flex;
+  background-color: rgb(71, 39, 24);
+  margin-bottom: 30px;
+}
+
+.liner {
+  display: flex;
+  flex-direction: column;
+}

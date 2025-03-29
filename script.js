@@ -5,44 +5,69 @@
     3. Have the computer return a value (done)
     4. Round Logic (done)
     5. Finishing touches (done)
-    6. Push it all to GitHub and submit (in progress)
+    6. Push it all to GitHub and submit (done)
+
+// Update Time //
+   7. Create three buttons that call the rpsGame function ()
+   8. Store the scores and declare a winner ()
+   9. Display the results in the box ()
+   10. Merge the branches and push to GitHub ()
 */
 
 // Number Assigner
-let rock = 1;
-let paper = 2;
-let scissors = 3;
+const rock = 1;
+const paper = 2;
+const scissors = 3;
+
+// Game Starter
+const rBTN = document.getElementsByClassName("one");
+const pBTN = document.getElementsByClassName("two");
+const sBTN = document.getElementsByClassName("three");
+
+const teller = document.getElementsByClassName("teller");
+const scorer = document.getElementsByClassName("scorer");
+
+function startRoundR(){
+   rpsGame ("rock");
+}
+function startRoundP(){
+   rpsGame ("paper");
+}
+function startRoundS(){
+   rpsGame ("scissors");
+}
 
 
-
-function rpsGame(){
+function rpsGame(prompter){
 
 // Game Logic
 
 function playRound(humanResponse, computerResponse){
-   let outcome1 = (humanResponse === 1 && computerResponse === 3)
-   let outcome2 = (humanResponse === 1 && computerResponse === 2)
-   let outcome3 = (humanResponse === 2 && computerResponse === 3)
-   let outcome4 = (humanResponse === 2 && computerResponse === 1)
-   let outcome5 = (humanResponse === 3 && computerResponse === 2)
-   let outcome6 = (humanResponse === 3 && computerResponse === 1)
+   let outcome1 = (humanResponse === rock && computerResponse === scissors)
+   let outcome2 = (humanResponse === "rock" && computerResponse === paper)
+   let outcome3 = (humanResponse === "paper" && computerResponse === scissors)
+   let outcome4 = (humanResponse === "paper" && computerResponse === "rock")
+   let outcome5 = (humanResponse === "scissors" && computerResponse === "paper")
+   let outcome6 = (humanResponse === "scissors" && computerResponse === "rock")
+   let outcome7 = (humanResponse === "rock" && computerResponse === "rock")
+   let outcome8 = (humanResponse === "paper" && computerResponse === "paper")
+   let outcome9 = (humanResponse === "scissors" && computerResponse === "scissors")
    
    let humanScore = 0;
    let computerScore = 0;
    
    if (humanResponse === computerResponse){
-      console.log(`Tie game!`)
+      console.log(`${humanKeyword} vs. ${computerKeyword}! Tie game!`)
    } else if (outcome6 || outcome2 || outcome3){
-      console.log(`Computer wins!`)
+      console.log(`${computerKeyword} beats ${humanKeyword}! Computer wins!`)
    } else if (outcome1 || outcome4 || outcome5){
-      console.log(`Human wins!`)
+      console.log(`${humanKeyword} beats ${computerKeyword}! Human wins!`)
    } else {
       console.log(`Nobody... wins?`)
    }
    }
 
 // Human Response
-let prompter = prompt("Throw your hand now! Rock, Paper, or Scissors!");
 
 if (prompter === "rock" || prompter === "Rock" || prompter === "ROCK"){
    console.log("Rock thrown! (Human)");
@@ -74,11 +99,7 @@ if (computerResponse === 1){
 const roundStorage = playRound(humanResponse, computerResponse);
 }
 
-rpsGame()
-rpsGame()
-rpsGame()
-rpsGame()
-rpsGame()
+
 
 
 
