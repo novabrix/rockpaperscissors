@@ -66,4 +66,12 @@ h4 {
 .liner {
   display: flex;
   flex-direction: column;
+  font-weight: bold;
+  align-items: center;
+  font-size: 35px;
+}
+
+.teller,
+.tellertwo{
+  font-size: 30px;
 }
