@@ -11,7 +11,7 @@
    7. Create three buttons that call the rpsGame function (done)
    8. Store the scores and declare a winner (done)
    9. Display the results in the box (done)
-   10. Bug-killer ()
+   10. Bug-killer (done)
    11. Merge the branches and push to GitHub ()
 */
 
@@ -26,7 +26,9 @@ const pBTN = document.querySelector("two");
 const sBTN = document.querySelector("three");
 
 const teller = document.querySelector(".teller");
+const tellertwo = document.querySelector(".tellertwo");
 const scorer = document.querySelector(".scorer");
+const numberer = document.querySelector(".numberer");
 
 let humanScore = 0;
 let computerScore = 0;
@@ -43,8 +45,7 @@ function startRoundS() {
 }
 
 function rpsGame(prompter) {
-  
-  if (humanScore < 5 || computerScore < 5) {
+  if (humanScore < 5 && computerScore < 5) {
     // Game Logic
 
     function playRound(humanResponse, computerResponse) {
@@ -132,6 +133,12 @@ function rpsGame(prompter) {
   // Game End Checker
 
   if (computerScore > 4) {
+    document.querySelector(".teller").style.fontSize = "40px";
+    document.querySelector(".teller").style.margin = "10px"
+    document.querySelector(".tellertwo").style.fontSize = "110px";
+    document.querySelector(".tellertwo").style.margin = "0px"
+    document.querySelector(".numberer").style.margin = "10px"
+
     document.querySelector(".teller").textContent = `Game End!`;
     document.querySelector(".tellertwo").textContent = `🤖`;
     document.querySelector(
@@ -140,6 +147,12 @@ function rpsGame(prompter) {
     document.querySelector(".numberer").textContent = `Better luck next time!`;
     winVar = true;
   } else if (humanScore > 4) {
+    document.querySelector(".teller").style.fontSize = "40px";
+    document.querySelector(".teller").style.margin = "10px"
+    document.querySelector(".tellertwo").style.fontSize = "110px";
+    document.querySelector(".tellertwo").style.margin = "0px"
+    document.querySelector(".numberer").style.margin = "10px"
+
     document.querySelector(".teller").textContent = `Game End!`;
     document.querySelector(".tellertwo").textContent = `👱🏼`;
     document.querySelector(
@@ -147,7 +160,13 @@ function rpsGame(prompter) {
     ).textContent = `Human has won the game! ${humanScore} to ${computerScore}!`;
     document.querySelector(".numberer").textContent = `Congratulations!`;
     winVar = true;
-  } else if (humanScore < 0, computerScore < 0) {
+  } else if ((humanScore < 0, computerScore < 0)) {
+    document.querySelector(".teller").style.fontSize = "40px";
+    document.querySelector(".teller").style.margin = "10px"
+    document.querySelector(".tellertwo").style.fontSize = "110px";
+    document.querySelector(".tellertwo").style.margin = "0px"
+    document.querySelector(".numberer").style.margin = "10px"
+
     document.querySelector(".teller").textContent = `ERROR`;
     document.querySelector(".tellertwo").textContent = `?`;
     document.querySelector(
@@ -157,4 +176,5 @@ function rpsGame(prompter) {
       ".numberer"
     ).textContent = `Reload the page for a possible fix!`;
   }
+  return winVar;
 }
